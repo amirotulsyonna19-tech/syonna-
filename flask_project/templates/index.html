@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kos Putri Griya Ayu - Hunian Nyaman & Aman Khusus Putri</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="bg-[#FFFBFB] text-gray-800 font-sans antialiased">
+
+    <!-- 1. HEADER & NAVBAR -->
+    <nav class="sticky top-0 z-50 bg-white/94 backdrop-blur-md border-b border-[#F5E1E3] shadow-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 sm:h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 rounded-full bg-[#B76E79] flex items-center justify-center text-white font-serif font-semibold text-lg shadow-sm">
+                        G
+                    </div>
+                    <div>
+                        <span class="text-xl sm:text-2xl font-serif font-bold text-gray-900 tracking-tight block">
+                            Kos Putri <span class="text-rose-gold">Griya Ayu</span>
+                        </span>
+                        <span class="text-[10px] uppercase tracking-wider text-rose-gold font-semibold -mt-1 block">
+                            Hunian Nyaman Khusus Putri
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-rose-gold font-medium transition-colors">Dashboard</a>
+                    <a href="#peta-kamar" class="text-gray-600 hover:text-rose-gold font-medium transition-colors">Status Kamar</a>
+                    <a href="#fasilitas-harga" class="text-gray-600 hover:text-rose-gold font-medium transition-colors">Fasilitas & Harga</a>
+                    <a href="#kontak" class="text-gray-600 hover:text-rose-gold font-medium transition-colors">Narahubung</a>
+                    <a href="https://wa.me/6281234567890" target="_blank" class="bg-rose-gold text-white px-5 py-2.5 rounded-full font-medium shadow-sm hover:bg-rose-gold-dark transition-all text-sm flex items-center">
+                        Tanya Pemilik
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-500 hover:text-rose-gold focus:outline-none p-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Drawer (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-[#F5E1E3] px-4 pt-2 pb-6 space-y-2">
+            <a href="#home" class="block px-3 py-2.5 rounded-lg text-gray-700 hover:bg-[#FFF5F5] hover:text-rose-gold font-medium">Dashboard</a>
+            <a href="#peta-kamar" class="block px-3 py-2.5 rounded-lg text-gray-700 hover:bg-[#FFF5F5] hover:text-rose-gold font-medium">Status Kamar</a>
+            <a href="#fasilitas-harga" class="block px-3 py-2.5 rounded-lg text-gray-700 hover:bg-[#FFF5F5] hover:text-rose-gold font-medium">Fasilitas & Harga</a>
+            <a href="#kontak" class="block px-3 py-2.5 rounded-lg text-gray-700 hover:bg-[#FFF5F5] hover:text-rose-gold font-medium">Narahubung</a>
+            <div class="pt-2">
+                <a href="https://wa.me/6281234567890" target="_blank" class="w-full text-center bg-rose-gold text-white block py-3 rounded-xl font-medium shadow-md">
+                    Hubungi Via WhatsApp
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. FITUR 1: DASHBOARD (HALAMAN UTAMA) -->
+    <header id="home" class="py-12 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:grid lg:grid-cols-12 lg:gap-12 items-center">
+            <!-- Hero Text -->
+            <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center space-x-2 bg-[#FFF0F1] border border-[#FAD0D4] text-[#B76E79] px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider mx-auto lg:mx-0">
+                    ✨ Kost Putri Eksklusif Tembalang
+                </div>
+                
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-gray-900 tracking-tight leading-tight">
+                    Hunian Modern,<br>
+                    <span class="text-rose-gold">Aman & Nyaman</span><br>
+                    Khusus Putri
+                </h1>
+
+                <p class="text-base sm:text-lg text-gray-600 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
+                    Griya Ayu menawarkan kost bersih, tenang, aman, dan kondusif untuk mahasiswi maupun karyawati. Lokasi strategis dekat dengan kampus, pusat kuliner, dan jalan raya utama.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                    <a href="#peta-kamar" class="w-full sm:w-auto text-center bg-rose-gold text-white px-8 py-3.5 rounded-full font-medium shadow-md hover:bg-rose-gold-dark transition-all">
+                        Cek Kamar Tersedia
+                    </a>
+                    <a href="#fasilitas-harga" class="w-full sm:w-auto text-center bg-white text-gray-700 border border-[#E9C8CE] px-8 py-3.5 rounded-full font-medium hover:border-rose-gold transition-all">
+                        Lihat Daftar Harga
+                    </a>
+                </div>
+            </div>
+
+            <!-- Illustration & Highlight Bubble -->
+            <div class="lg:col-span-6 mt-12 lg:mt-0 relative">
+                <!-- Fallback elegant gradient mockup instead of dynamic absolute images for portable offline usage -->
+                <div class="aspect-[4/3] w-full rounded-2xl bg-gradient-to-tr from-[#FFF0F1] to-[#FFEAE5] border-4 border-white shadow-xl flex items-center justify-center relative overflow-hidden">
+                    <div class="text-center p-8 z-10 space-y-2">
+                        <span class="text-3xl font-serif font-bold text-[#B76E79]">Kos Putri Griya Ayu</span>
+                        <p class="text-xs text-gray-500 font-medium">Halaman Utama Informasi Hunian</p>
+                    </div>
+                    <!-- Absolute aesthetic decorations -->
+                    <div class="absolute -bottom-10 -left-10 w-44 h-44 rounded-full bg-[#FFF5F5] opacity-80"></div>
+                    <div class="absolute -top-10 -right-10 w-44 h-44 rounded-full bg-white opacity-60"></div>
+                </div>
+
+                <!-- Floating availability card -->
+                <div class="absolute -top-4 -right-4 bg-white border border-[#F5E1E3] rounded-2xl p-4 shadow-md flex items-center space-x-3">
+                    <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+                    <div>
+                        <div class="text-[10px] text-gray-500 font-semibold uppercase tracking-wide">Kamar Tersedia</div>
+                        <div class="text-sm font-bold text-gray-900">{{ available_rooms }} / {{ total_rooms }} Unit Kosong</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- METADATA & DATA KESELURUHAN KOS -->
+    <section class="bg-[#FFF5F6] py-12 border-y border-[#F5E1E3]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-xs font-bold uppercase tracking-widest text-center text-rose-gold mb-10">Data Keseluruhan Kos & Fasilitas</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                
+                <!-- Cards block -->
+                <div class="md:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Unit Total -->
+                    <div class="bg-white p-5 rounded-2xl border border-[#F5E1E3] shadow-xs flex items-center space-x-4">
+                        <div class="bg-[#FFF0F1] p-3 rounded-xl text-[#B76E79] text-xl font-bold">15</div>
+                        <div>
+                            <span class="text-xs text-gray-500 font-semibold uppercase tracking-wider block">Total Kamar</span>
+                            <span class="text-sm font-bold text-gray-800">15 Unit Siap Huni</span>
+                        </div>
+                    </div>
+
+                    <!-- Unit Kosong -->
+                    <div class="bg-white p-5 rounded-2xl border border-[#F5E1E3] shadow-xs flex items-center space-x-4">
+                        <div class="bg-emerald-50 p-3 rounded-xl text-emerald-600 text-xl font-bold">{{ available_rooms }}</div>
+                        <div>
+                            <span class="text-xs text-gray-500 font-semibold uppercase tracking-wider block">Kamar Tersedia</span>
+                            <span class="text-sm font-bold text-emerald-600">Terbuka Untuk Dipesan</span>
+                        </div>
+                    </div>
+
+                    <!-- Included Amenities Grid -->
+                    <div class="bg-white p-5 rounded-2xl border border-[#F5E1E3] shadow-xs sm:col-span-2 space-y-3">
+                        <span class="text-xs text-gray-500 font-bold uppercase tracking-wider block">Sudah Include Biaya Bulanan:</span>
+                        
+                        <div class="grid grid-cols-2 gap-3 text-xs font-semibold text-gray-700">
+                            <div class="flex items-center space-x-1.5">
+                                <span class="text-emerald-500">✓</span>
+                                <span>Free Wi-Fi Kencang</span>
+                            </div>
+                            <div class="flex items-center space-x-1.5">
+                                <span class="text-emerald-500">✓</span>
+                                <span>Air Bersih Melimpah</span>
+                            </div>
+                            <div class="flex items-center space-x-1.5">
+                                <span class="text-emerald-500">✓</span>
+                                <span>Kebersihan & Sampah</span>
+                            </div>
+                            <div class="flex items-center space-x-1.5">
+                                <span class="text-emerald-500">✓</span>
+                                <span>Keamanan Kawasan</span>
+                            </div>
+                        </div>
+
+                        <div class="text-[10px] text-gray-400 font-medium italic pt-2 border-t border-[#F5E1E3]">
+                            *Catatan: Listrik menggunakan token mandiri per masing-masing kamar.
+                        </div>
+                    </div>
+
+                    <!-- Alamat Lengkap with Copy Button -->
+                    <div class="bg-white p-5 rounded-2xl border border-[#F5E1E3] shadow-xs sm:col-span-2 space-y-3">
+                        <span class="text-xs text-[#B76E79] font-bold uppercase tracking-wider block">Alamat Lengkap Hunian</span>
+                        <p id="alamatText" class="text-sm text-gray-700">
+                            Jl. Menur Indah Gg. Ayu No. 27, Tembalang, Kota Semarang, Jawa Tengah (Dekat Kampus Utama)
+                        </p>
+                        <div class="flex space-x-2">
+                            <button id="btnCopyAlamat" class="bg-[#FFF5F5] border border-[#F5D5D9] text-rose-gold px-4 py-1.5 rounded-lg text-xs font-medium hover:bg-[#FFF0F1] transition-all">
+                                Salin Alamat
+                            </button>
+                            <a href="https://maps.google.com" target="_blank" class="bg-white border border-gray-300 text-gray-700 px-4 py-1.5 rounded-lg text-xs font-medium hover:border-[#B76E79] transition-all">
+                                Lihat Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Maps (Mock / Placeholder) -->
+                <div class="md:col-span-5 bg-white p-4 rounded-2xl border border-[#F5E1E3] shadow-sm space-y-3">
+                    <span class="text-xs font-semibold text-gray-500 block uppercase tracking-wider">Lokasi Google Maps</span>
+                    <div class="rounded-xl overflow-hidden h-60 border border-[#F5E1E3] bg-[#FFF9F9] flex items-center justify-center p-4 text-center">
+                        <div>
+                            <span class="text-2xl block mb-2">📍</span>
+                            <span class="text-xs font-semibold block text-gray-700">Google Maps Iframe Embed</span>
+                            <span class="text-[10px] block text-gray-400 mt-1">Garis lintang Tembalang, Semarang</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- VISUAL ROOM FLOOR GRID (DENAH INTERAKTIF) -->
+    <section id="peta-kamar" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="text-sm font-bold uppercase tracking-wider text-rose-gold">Suku Kelola Status Kamar</span>
+            <h2 class="text-3xl font-serif font-bold text-gray-900 mt-2">Denah & Ketersediaan Kamar</h2>
+            <p class="text-gray-500 mt-2 text-sm font-light">
+                Tekan nomor unit kamar kost di bawah untuk meninjau status ketersediaan atau memesan unit secara spesifik.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {% for floor in [1, 2, 3] %}
+            <div class="bg-white rounded-2xl border border-[#F5E1E3] p-5 shadow-xs space-y-4">
+                <span class="font-bold text-gray-900 text-base block border-b border-[#F5E1E3] pb-2">Lantai {{ floor }}</span>
+                
+                <div class="grid grid-cols-5 gap-2">
+                    {% for room in rooms if room.floor == floor %}
+                    <button 
+                        class="aspect-square rounded-xl border flex flex-col items-center justify-center p-1 cursor-pointer transition-all btn-kamar-click {{ 'border-emerald-200 bg-emerald-50 text-emerald-800' if room.isAvailable else 'border-rose-100 bg-rose-50 text-rose-800' }}"
+                        data-number="{{ room.number }}"
+                        data-type="{{ room.type }}"
+                        data-price="{{ room.price }}"
+                        data-available="{{ 'true' if room.isAvailable else 'false' }}"
+                        data-facilities="{{ room.facilities | join(', ') }}"
+                    >
+                        <span class="text-[9px] block">No</span>
+                        <span class="text-base font-bold block -mt-1">{{ room.number }}</span>
+                        <span class="text-[8px] uppercase tracking-wider block opacity-75">{{ room.type }}</span>
+                    </button>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Detail Box Pop-up (JavaScript Toggled) -->
+        <div id="detailBox" class="hidden mt-8 bg-white max-w-2xl mx-auto rounded-2xl border-2 border-rose-gold shadow-md p-6 relative">
+            <button id="btnTutupDetail" class="absolute top-3 right-3 text-gray-400 hover:text-gray-800 text-xl font-bold">&times;</button>
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <div>
+                    <span id="detailKamarTipe" class="bg-rose-gold text-white text-[10px] uppercase font-bold px-2 py-0.5 rounded-md inline-block mb-1">TIPE</span>
+                    <h3 id="detailKamarNo" class="text-2xl font-serif font-black text-gray-900">Kamar No xxx</h3>
+                    <p class="text-sm text-gray-500 mt-1">Harga Bulanan: <strong id="detailKamarHarga" class="text-rose-gold text-base">Rp xxx</strong></p>
+                </div>
+                <div class="mt-4 sm:mt-0">
+                    <span id="detailKamarStatus" class="bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs px-3 py-1.5 rounded-full font-bold inline-block">Tersedia</span>
+                </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-gray-100">
+                <span class="text-xs text-gray-400 block font-bold uppercase tracking-wider mb-2">Gambar & Detail Fasilitas Unit:</span>
+                <p id="detailKamarFasilitas" class="hidden text-xs text-gray-700 leading-relaxed"></p>
+                <div id="detailKamarFasilitasGrid" class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    <!-- Dinamis diisi dari Javascript -->
+                </div>
+            </div>
+            <div class="mt-6">
+                <button id="btnPesanSpesifik" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5 rounded-xl text-xs flex items-center justify-center space-x-2">
+                    💬 Pesan Kamar Ini Lewat WhatsApp
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. FITUR 2: FASILITAS & HARGA KAMAR (KARTU BESAR / PRICING TABLE) -->
+    <section id="fasilitas-harga" class="bg-[#FFF5F6] py-16 sm:py-20 border-y border-[#F5E1E3]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-sm font-bold uppercase tracking-wider text-rose-gold block">Pricelist Bulanan</span>
+                <h2 class="text-3xl font-serif font-bold text-gray-900 mt-1">Pilihan Tipe Kamar & Tarif</h2>
+                <p class="text-gray-500 text-sm mt-3 font-light">
+                    Sewa transparan tanpa tambahan biaya administrasi. Seluruh sewa bulanan sudah termasuk biaya utama.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Tipe Kamar 1: Non-AC -->
+                <div class="bg-white rounded-3xl border border-[#F5E1E3] overflow-hidden flex flex-col justify-between hover:shadow-lg transition-all">
+                    <div class="p-6 sm:p-8 space-y-6">
+                        <span class="bg-gray-100 text-gray-700 text-xs px-3.5 py-1 rounded-full font-bold uppercase tracking-wider">Tipe Standar</span>
+                        <h3 class="text-2xl font-serif font-bold text-gray-900">Kamar Non-AC</h3>
+                        
+                        <div class="border-y border-[#FFF5F5] py-4 flex items-baseline space-x-1">
+                            <span class="text-3xl font-bold text-rose-gold text-[#B76E79]">Rp 700.000</span>
+                            <span class="text-xs text-gray-400 font-light">/ Bulan</span>
+                        </div>
+
+                        <ul class="space-y-2.5 text-xs text-gray-750">
+                            <li>✓ Kasur Nyaman</li>
+                            <li>✓ Kipas Angin Dinding</li>
+                            <li>✓ Kamar Mandi Dalam</li>
+                            <li>✓ Rak Serbaguna</li>
+                            <li>✓ Lemari Pakaian Kayu</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-gray-50 border-t border-gray-100">
+                        <button class="w-full bg-slate-800 text-white font-semibold py-3 rounded-xl text-xs btn-pesan-whatsapp-umum" data-type="Non-AC">
+                            Pesan Sekarang (Non-AC)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tipe Kamar 2: AC -->
+                <div class="bg-white rounded-3xl border-2 border-rose-gold overflow-hidden flex flex-col justify-between shadow-md relative">
+                    <!-- Popular badge -->
+                    <span class="absolute top-0 right-0 bg-rose-gold text-white text-[9px] uppercase tracking-wider font-extrabold py-1 px-4 rounded-bl-xl">Terpopuler</span>
+                    
+                    <div class="p-6 sm:p-8 space-y-6">
+                        <span class="bg-[#FFF0F1] text-rose-gold text-xs px-3.5 py-1 rounded-full font-bold uppercase tracking-wider">Tipe Eksklusif</span>
+                        <h3 class="text-2xl font-serif font-bold text-gray-900">Kamar AC</h3>
+                        
+                        <div class="border-y border-[#FFF5F5] py-4 flex items-baseline space-x-1">
+                            <span class="text-3xl font-bold text-rose-gold text-[#B76E79]">Rp 800.000</span>
+                            <span class="text-xs text-gray-400 font-light">/ Bulan</span>
+                        </div>
+
+                        <ul class="space-y-2.5 text-xs text-gray-750">
+                            <li>✓ Kasur Springbed Premium</li>
+                            <li>✓ Air Conditioner (AC) Hemat Daya</li>
+                            <li>✓ Kamar Mandi Dalam</li>
+                            <li>✓ Rak Serbaguna</li>
+                            <li>✓ Lemari Pakaian Besar</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-[#FFF5F6] border-t border-[#F5E1E3]">
+                        <button class="w-full bg-rose-gold text-white font-semibold py-3 rounded-xl text-xs btn-pesan-whatsapp-umum" data-type="AC">
+                            Pesan Sekarang (AC)
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. FITUR 3: NARAHUBUNG (FOOTER & SOSIAL MEDIA) -->
+    <section id="kontak" class="bg-slate-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                
+                <!-- Contact info -->
+                <div class="space-y-6">
+                    <span class="bg-slate-800 text-rose-gold px-3 py-1 rounded text-xs font-semibold uppercase tracking-wider">Hubungi Pemilik</span>
+                    <h2 class="text-3xl font-serif font-bold">Informasi Narahubung</h2>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed">
+                        Jika memiliki pertanyaan menenai ketersediaan unit kos atau ingin berkunjung ke lokasi, hubungi kami pada kontak di bawah:
+                    </p>
+
+                    <!-- Contact channels -->
+                    <div class="space-y-3 pt-4">
+                        <p class="text-xs text-gray-300">📱 <strong>WhatsApp:</strong> <a href="https://wa.me/6281234567890" target="_blank" class="text-rose-gold hover:underline font-bold">+62 812-3456-7890</a></p>
+                        <p class="text-xs text-gray-300">📸 <strong>Instagram:</strong> <button class="btn-sosmed text-rose-gold hover:underline font-bold" data-platform="Instagram" data-user="@kosputri_griyaayu">@kosputri_griyaayu</button></p>
+                        <p class="text-xs text-gray-300">🎵 <strong>TikTok:</strong> <button class="btn-sosmed text-rose-gold hover:underline font-bold" data-platform="TikTok" data-user="@griyaayukos">@griyaayukos</button></p>
+                    </div>
+                </div>
+
+                <!-- Simpler message question form -->
+                <div class="bg-slate-800 p-6 sm:p-8 rounded-2xl border border-slate-700">
+                    <h3 class="text-lg font-bold mb-4 font-serif">Kirim Pertanyaan Cepat</h3>
+                    <form id="formTanya" class="space-y-4">
+                        <div>
+                            <input type="text" id="tanyaNama" placeholder="Nama Lengkap Anda" required class="w-full bg-slate-705 border border-slate-600 p-3 rounded-lg text-xs outline-none focus:border-rose-gold text-white">
+                        </div>
+                        <div>
+                            <textarea id="tanyaPesan" rows="3" placeholder="Tuliskan pertanyaan Anda mengenai kost di sini..." required class="w-full bg-slate-705 border border-slate-600 p-3 rounded-lg text-xs outline-none focus:border-rose-gold text-white"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-rose-gold text-white font-semibold py-2.5 rounded-lg text-xs">
+                            Kirim Formulir ke Pengelola
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Copyright footer markup -->
+            <div class="pt-12 mt-12 border-t border-slate-800 text-center text-[11px] text-gray-500">
+                <p>© 2026 Kos Putri Griya Ayu. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Floating Toasts (JavaScript-Toggled) -->
+    <div id="customToast" class="hidden fixed bottom-6 left-6 z-50 bg-[#FFF5F5] border-2 border-emerald-400 text-emerald-900 p-4 rounded-xl shadow-lg text-xs max-w-sm">
+        <span class="font-bold block">Notifikasi</span>
+        <span id="customToastMsg" class="text-gray-600 block mt-0.5">Pesan Berhasil</span>
+    </div>
+
+    <!-- JavaScript script references -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "Kos Putri Griya Ayu",
+  "description": "Website resmi informasi dan pemesanan kamar Kos Putri Griya Ayu, kost eksklusif putri dengan suasana aman, nyaman, dan tenang.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
